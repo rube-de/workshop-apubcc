@@ -2,10 +2,10 @@ import {ethers} from "hardhat";
 
 async function main() {
     
-    const contractAddress = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
+    const contractAddress = "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
     const guessNumber = await ethers.getContractAt("GuessNumber", contractAddress);
     
-    const guess = 7;
+    const guess = 8;
     console.log(`Guessing Number...${guess}`);
     await guessNumber.guess(guess);
     console.log("You guessed the number!");

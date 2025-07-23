@@ -1,8 +1,12 @@
 {
   "name": "hardhat-project",
+  "scripts": {
+    "deploy-guess": "npx hardhat ignition deploy ./ignition/modules/GuessNumber.ts --network sapphire-localnet"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
     "@oasisprotocol/sapphire-contracts": "^0.2.14",
+    "@oasisprotocol/sapphire-hardhat": "^2.22.2",
     "hardhat": "^2.26.1"
   }
 }

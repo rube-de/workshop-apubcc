@@ -1,4 +1,5 @@
 import { HardhatUserConfig } from "hardhat/config";
+// import "@oasisprotocol/sapphire-hardhat";
 import "@nomicfoundation/hardhat-toolbox";
 
 const accounts = process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
@@ -12,12 +13,12 @@ const accounts = process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
   networks: {
-    localhost: {
+    localhost: { // Default Hardhat network
       url: "http://localhost:8545",
       chainId: 1337,
       accounts,
     },
-    "sapphire-localnet": {
+    "sapphire-localnet": { // Sapphire localnet docker
       url: "http://localhost:8545",
       chainId: 0x5afd,
       accounts,

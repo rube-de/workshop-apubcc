@@ -10,17 +10,12 @@ async function main() {
   
   const address = await secretStorage.getAddress();
   console.log("SecretStorage deployed to:", address);
-  
-  // Get the not-so-secret number
-  const notSoSecretNumber = await secretStorage.notSoSecretNumber();
-  console.log("Not so secret number:", notSoSecretNumber.toString());
 
-//   // Get the secret number
-//   const secretNumber = await secretStorage.secretNumber();
-//   console.log("Secret number:", secretNumber.toString());
+  // set secret number
+  const newSecretNumber = 67890;
+  console.log(`Setting secret number to: ${newSecretNumber}`);
+  await secretStorage.setSecretNumber(newSecretNumber);
 
-    const storageSlot = await ethers.provider.getStorage(address, 0)
-    console.log(`Secret number value : ${parseInt(storageSlot, 16)}`)
 }
 
 main()

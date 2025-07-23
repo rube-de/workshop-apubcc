@@ -10,4 +10,8 @@ contract SecretStorage {
         secretNumber = _secretNumber;
         notSoSecretNumber = _notSoSecretNumber;
     }
+
+    function setSecretNumber(int256 _secretNumber) public {
+        secretNumber = _secretNumber;
+    }
 }
